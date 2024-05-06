@@ -10,7 +10,7 @@ db = mongo.db
 def index():
     hostname = socket.gethostname()
     return jsonify(
-        message="Welcome to Tasks app! I am running inside {} pod!".format(hostname)
+        message="Welcome to Tasks app! I am running inside {} host!".format(hostname)
     )
 @app.route("/tasks")
 def get_all_tasks():
