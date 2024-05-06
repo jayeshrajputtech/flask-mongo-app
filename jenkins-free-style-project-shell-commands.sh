@@ -35,3 +35,15 @@ echo "----------------Building Code----------------"
 docker build . -t flask-mongo-app:1.0
 echo "----------------Running Docker Container----------------"
 docker run -d -p 5000:5000 -t flask-mongo-app:1.0
+
+
+
+echo "----------------Cloning Code----------------"
+
+echo "----------------Building Code----------------"
+#docker build . -t react-django-todo-app:1.0
+
+echo "----------------Running Docker Container----------------"
+#docker run -d -p 8001:8001 --rm -t react-django-todo-app:1.0
+docker-compose down
+docker-compose up -d --no-deps --build web
